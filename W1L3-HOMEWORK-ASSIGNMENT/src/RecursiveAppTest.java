@@ -1,12 +1,13 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 class RecursiveAppTest {
     RecursiveApp myApp;
-
-    @org.junit.jupiter.api.BeforeEach
+    @BeforeEach
     void setUp() {
-      myApp = new RecursiveApp();
+        myApp = new RecursiveApp();
     }
 
     @Test
@@ -35,10 +36,9 @@ class RecursiveAppTest {
 
     @Test
     void getMaxTest() {
-    int []a = {1,3,5,7,2};
-    int act = myApp.getMax(a);
-    int exp =7;
-    assertEquals(exp,act);
-   }
-
+        int []a = {1,3,5,7,2};
+        int act = myApp.getMax(a);
+        int exp =7;
+        assertEquals(exp,act);
+    }
 }
